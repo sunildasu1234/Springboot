@@ -1,4 +1,4 @@
-package com.techprimers.jpa.springdatajpahibernateexample;
+package com.sunil.jpa.springdatajpahibernateexample;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

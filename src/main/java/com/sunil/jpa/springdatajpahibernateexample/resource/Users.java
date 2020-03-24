@@ -1,17 +1,22 @@
-package com.techprimers.jpa.springdatajpahibernateexample.resource;
+package com.sunil.jpa.springdatajpahibernateexample.resource;
 
+
+import com.fasterxml.jackson.annotation.JsonIgnore;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "users")
+@Table(name = "content")
 public class Users {
 
-    @Id
+    @Id()
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    @JsonIgnore
     private Integer id;
-    private String name;
+/*    private String name;
     private Integer salary;
-    private String teamName;
+    private String teamName;*/
+    private String message;
 
     public Users() {
     }
@@ -24,7 +29,7 @@ public class Users {
         this.id = id;
     }
 
-    public String getName() {
+   /* public String getName() {
         return name;
     }
 
@@ -46,5 +51,13 @@ public class Users {
 
     public void setTeamName(String teamName) {
         this.teamName = teamName;
+    }*/
+
+    public String getMessage() {
+        return message;
+    }
+
+    public void setMessage(String message) {
+        this.message = message;
     }
 }
